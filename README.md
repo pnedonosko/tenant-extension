@@ -8,11 +8,11 @@ Prerequisites
 
 Ensure following is done before installing and running the extension:
 * This extension requires MySQL backup (dump) of a target tenant from eXo Cloud. The backup should be applied to a clean database before running the extension. Request a backup via eXo Cloud support channel.
-* Obtain clean eXo Platform Enterprise or Express edition Tomcat bundle, it should of a version currently used by eXo Cloud. You have to use the same version as eXo Cloud runs for data restoration and then only upgrade to higher versions. 
+* Obtain clean eXo Platform Enterprise or Express edition Tomcat bundle. Use the same version as eXo Cloud runs for data restoration and then only upgrade to higher versions. 
 * Install MySQL of latest supported by eXo Cloud version for your infrastructure. 
 * Use the same Java version as by current eXo Cloud.
 
-This Tenant Extension is independent on the eXo Platform version until it doesn't change location of JCR repository-configuration.xml files and JCR organization service component configuration with related dependecies. Respectively check the above prerequisites with the current eXo Cloud version and apply accordingly.
+This Tenant Extension is independent on the eXo Platform version until it doesn't change location of JCR `repository-configuration.xml` files and JCR organization service component configuration with related dependecies. Respectively check the above prerequisites with the current eXo Cloud version and apply accordingly.
 
 Currently eXo Cloud uses Platform 4.1-M2, it needs MySQL 5.5 and Java 1.6. 
 
