@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
 
     Copyright (C) 2014 eXo Platform SAS.
@@ -18,7 +19,6 @@
     02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-
 <repository-service default-repository="${gatein.jcr.repository.default:repository}">
   <repositories>
     <repository name="${gatein.jcr.repository.default:repository}"

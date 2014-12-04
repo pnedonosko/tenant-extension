@@ -17,7 +17,6 @@
     along with this program; if not, see<http://www.gnu.org/licenses/>.
 
 -->
-
 <repository-service default-repository="${gatein.jcr.repository.default:repository}">
   <repositories>
     <repository name="${gatein.jcr.repository.default:repository}" system-workspace="${gatein.jcr.workspace.system:system}" default-workspace="${gatein.jcr.workspace.default:portal-system}">

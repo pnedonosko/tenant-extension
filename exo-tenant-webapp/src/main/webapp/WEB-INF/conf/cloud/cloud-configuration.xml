@@ -92,9 +92,9 @@
       <init-params>
         <properties-param>
           <name>namespaces</name>
-          <property name="dc" value="http://purl.org/dc/elements/1.1/"/>
-          <property name="jos" value="http://www.exoplatform.com/jcr-services/organization-service/1.0/"/>
-          <property name="exoide" value="http://exoplatform.org/ide/1.1.x/"/>
+          <property name="dc" value="http://purl.org/dc/elements/1.1/" />
+          <property name="jos" value="http://www.exoplatform.com/jcr-services/organization-service/1.0/" />
+          <property name="exoide" value="http://exoplatform.org/ide/1.1.x/" />
         </properties-param>
       </init-params>
     </component-plugin>

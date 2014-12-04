@@ -18,7 +18,6 @@
     02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-
 <repository-service default-repository="${gatein.jcr.repository.default}">
   <repositories>
     <repository name="${gatein.jcr.repository.default}" system-workspace="${gatein.jcr.workspace.system}" default-workspace="${gatein.jcr.workspace.default}">
