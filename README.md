@@ -65,7 +65,7 @@ Set JCR dialect to `mysql-utf8` as eXo Cloud uses. Disable JCR value storage if 
 
 Install Tenant Extension. You can install it from central catalog via Add-ons Manager tool: `addons.sh` for Platform 4.1-M2 or `addon` for 4.1-RC1. If you have  bundle of the addon locally you also can simply unarchive it and copy its content, `lib` and `webapps` folders, to the root of your Platform Tomcat folder.
 
-Now you are ready to start your Platform server. Start it and ensure its log doesn't contain errors. When server starts successfully, stop it and start again. After this you can use your tenant on-premise without limitations.
+Now you are ready to start your Platform server. Start it and ensure its log doesn't contain errors. When server will be started successfully, stop it and start it again. After this you can use your tenant on-premise without limitations.
 
 Post-installation steps
 =======================
