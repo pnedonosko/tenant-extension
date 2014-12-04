@@ -7,8 +7,8 @@ Prerequisites
 =============
 
 Ensure following is done before installing and running the extension:
-* This extension requires MySQL dump of a target tenant from eXo Cloud. The dump should be applied to a clean database before running the extension. Request a backup via eXo Cloud support channel.
-* Obtain clean eXo Platform Enterprise or Express edition Tomcat bundle, it should of a version currently used by eXo Cloud. You have to use the same version as eXo Cloud runs for initial migration and then only upgrade to higher versions. 
+* This extension requires MySQL backup (dump) of a target tenant from eXo Cloud. The backup should be applied to a clean database before running the extension. Request a backup via eXo Cloud support channel.
+* Obtain clean eXo Platform Enterprise or Express edition Tomcat bundle, it should of a version currently used by eXo Cloud. You have to use the same version as eXo Cloud runs for data restoration and then only upgrade to higher versions. 
 * Install MySQL of latest supported by eXo Cloud version for your infrastructure. 
 * Use the same Java version as by current eXo Cloud.
 
@@ -23,9 +23,9 @@ eXo Cloud manages several servers of eXo Platform running all tenants data in My
 
 eXo Cloud uses JCR organization service, not a default one based on PicketLink IDM. This implementation stores all organization records in a tenant JCR repository. Thus all your users, groups and membershipts also in a MySQL dump of your tenant. 
 
-There are several extra add-ons installed for all tenants in eXo Cloud. They may don't exist in clean Platform you downloaded for on-premise installation. Check with current eXo Cloud version for required add-ons before installing this extension. Each add-on acts differently in the Platform and additional study or consulting may be required to figure out when to install it, before or after the migration of your tenant data.
+There are several extra add-ons installed for all tenants in eXo Cloud. They may don't exist in clean Platform you downloaded for on-premise installation. Check with current eXo Cloud version for required add-ons before installing this extension. Each add-on acts differently in the Platform and additional study or consulting may be required to figure out when to install it, before or after the data restoration of your tenant.
 
-As for eXo Cloud 4.1-M2, it uses Cloud Drive and Video Calls add-ons. They both can be installed after the migration and upgrade to required Platform version.
+As for eXo Cloud 4.1-M2, it uses Cloud Drive and Video Calls add-ons. They both can be installed after the restoration and upgrade to required Platform version.
 
 How to use
 ==========
@@ -65,12 +65,12 @@ Set JCR dialect to `mysql-utf8` as eXo Cloud uses. Disable JCR value storage if 
 
 Install Tenant Extension. You can install it from central catalog via Add-ons Manager tool: `addons.sh` for Platform 4.1-M2 or `addon` for 4.1-RC1. If you have  bundle of the addon locally you also can simply unarchive it and copy its content, `lib` and `webapps` folders, to the root of your Platform Tomcat folder.
 
-Now you are ready to start your Platform server. Start it and ensure its log doesn't contain errors. When server will be started successfully, stop it and start it again. After this you can use your tenant on-premise without limitations.
+Now all your data restored and you can start your Platform server. Start it and ensure its log doesn't contain errors. When server will be started successfully, stop it and start it again. After this you can use your tenant on-premise without limitations.
 
-Post-installation steps
-=======================
+Post-restoration steps
+======================
 
-eXo Cloud introduces custom portlets and/or gadgets which not available in standalone Platform. For example, Colleagues Invitation gadget will appear after the migration as it was persisted in JCR (all gadgets do this), but it doesn't work as required web-services don't exist locally. You need to remove such portlets/gadgets after the migration. This can be done from user-interface under Administrator account via [Edit](http://docs.exoplatform.com/PLF40/PLFUserGuide.AdministeringeXoPlatform.ManagingPages.EditingPage.html) menu. 
+eXo Cloud introduces custom portlets and/or gadgets which not available in standalone Platform. For example, Colleagues Invitation gadget will appear after the data restoration as it was persisted in JCR (all gadgets do this), but it cannot work as required web-services don't exist locally. You need to remove such portlets/gadgets after the restoration. This can be done from user-interface under Administrator account via [Edit](http://docs.exoplatform.com/PLF40/PLFUserGuide.AdministeringeXoPlatform.ManagingPages.EditingPage.html) menu. 
 
 
 What is inside the Tenant Extension
