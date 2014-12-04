@@ -65,7 +65,12 @@ Set JCR dialect to `mysql-utf8` as eXo Cloud uses. Disable JCR value storage if 
 
 Install Tenant Extension. You can install it from central catalog via Add-ons Manager tool: `addons.sh` for Platform 4.1-M2 or `addon` for 4.1-RC1. If you have  bundle of the addon locally you also can simply unarchive it and copy its content, `lib` and `webapps` folders, to the root of your Platform Tomcat folder.
 
-Now you are ready to start your Platform server. Start it and ensure its log doesn't contain errors. When server starts successfully, stop it and start again. You can use your tenant on-premise without limitations.
+Now you are ready to start your Platform server. Start it and ensure its log doesn't contain errors. When server starts successfully, stop it and start again. After this you can use your tenant on-premise without limitations.
+
+Post-installation steps
+=======================
+
+eXo Cloud introduces custom portlets and/or gadgets which not available in standalone Platform. For example, Colleagues Invitation gadget will appear after the migration as it was persisted in JCR (all gadgets do this), but it doesn't work as required web-services don't exist locally. You need to remove such portlets/gadgets after the migration. This can be done from user-interface under Administrator account via [Edit](http://docs.exoplatform.com/PLF40/PLFUserGuide.AdministeringeXoPlatform.ManagingPages.EditingPage.html) menu. 
 
 
 What is inside the Tenant Extension
